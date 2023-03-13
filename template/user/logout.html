@@ -1,0 +1,21 @@
+{% extends 'partials/base.html' %}
+{% block title %}Logout Page{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-6 offset-md-3">
+        <div class="border p-3 bg-white">
+            <h3>Logout page</h3>
+            <hr>
+             <div class="alert alert-danger">
+                
+                
+                <h4>You have logged out successfully</h4>
+             </div>
+             <a href="{% url 'user-login' %}">Login</a>
+        </div>
+           
+       </div>
+    </div>
+</div>
+{% endblock %}
