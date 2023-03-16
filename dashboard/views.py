@@ -8,9 +8,9 @@ from django.contrib import messages
 # Create your views here.
 @login_required
 def index(request):
-    issueditems=Issued_Items.objects.all()
+    items=Issued_Items.objects.all()
     product=Product.objects.all()
-    issueditems_count = issueditems.count()
+    items_count = items.count()
     product_count = product.count()
     workers_count =User.objects.all().count()
     
@@ -24,12 +24,12 @@ def index(request):
     else:
         form=orderform()
     context={
-        'issueditems':issueditems,
+        'items':items,
         'form':form,
         'product':product,
         'product_count': product_count,
         'workers_count': workers_count,
-        'issueditems_count': issueditems_count,
+        'items_count': items_count,
         
 
     }
